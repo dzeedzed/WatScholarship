@@ -97,16 +97,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//            recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> parent,
-//                                        View view, int position, long id) {
-//                    intent = new Intent(MainActivity.this, ScholarshipActivity.class);
-//                    Bundle b = putBundle(scholarshipList.get(position));
-//                    intent.putExtras(b);
-//                    startActivity(intent);
-//                }
-//            });
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent,
+                                        View view, int position, long id) {
+                    intent = new Intent(MainActivity.this, ScholarshipActivity.class);
+                    Bundle b = putBundle(scholarshipList.get(position));
+                    intent.putExtras(b);
+                    startActivity(intent);
+                }
+            });
         }
 
     }
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
 //                    R.layout.list_item_scholarship, scholarshipList);
 
             ArrayAdapter<Scholarship> adapter = new ArrayAdapter<Scholarship>(context,
-                    android.R.layout.scholarship_list_item, scholarshipList);
+                    R.layout.scholarship_list_item, scholarshipList);
 
             listView.setAdapter(adapter);
 
