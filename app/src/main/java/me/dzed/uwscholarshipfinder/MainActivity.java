@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     // API key, API URL, and json format
     private final String API_KEY = "3ea2436df77a555842dc8fff85a2a841";
-    private final String format = "json";
+    private final String FORMAT = "json";
     private final String URL = "https://api.uwaterloo.ca/v2/awards/undergraduate.";
 
     // Error Tags
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
             // Retrieve JSON String with the help of the HTTPJson class
             HTTPJson httpJson = HTTPJson.getInstance();
-            String url = URL + format + "?key=" + API_KEY;
+            String url = URL + FORMAT + "?key=" + API_KEY;
             String jsonString = httpJson.connectHTTP(url);
 
             // Parse JSON String, store Scholarship data

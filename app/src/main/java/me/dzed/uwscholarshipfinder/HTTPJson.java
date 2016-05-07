@@ -202,7 +202,8 @@ public class HTTPJson {
                     // Get deadline date String
                     JSONObject dl = read.getJSONObject(TAG_DEADLINES);
                     JSONArray dlArray = dl.getJSONArray(TAG_APPLICATION);
-                    String deadlines = "N/A";
+                    String deadlines = getArrayString(dlArray);
+                    // String deadlines = "N/A";
                     // deadlines = dlArray.getString(0);
 
                     // Get Applictaion Info
