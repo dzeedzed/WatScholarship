@@ -146,6 +146,7 @@ public class HTTPJson {
                     String contact = read.getString(TAG_CONTACT);
                     String link = read.getString(TAG_LINK);
 
+                    // Get citizenship
                     JSONArray citi = read.getJSONArray(TAG_CITIZENSHIP);
                     String citizenship = getArrayString(citi);
 
@@ -155,7 +156,6 @@ public class HTTPJson {
 
                     // Get faculty information
                     JSONArray fa = read.getJSONArray(TAG_PROGRAMS);
-
                     boolean math = false;
                     boolean engineering = false;
                     boolean arts = false;
@@ -163,7 +163,8 @@ public class HTTPJson {
                     boolean science = false;
                     boolean environment = false;
 
-                    // Use if faculty information is available
+                    // Use if faculty information is available, though it's been discontinued
+                    // by the UW API :(
 //                    try {
 //                        for (int k = 0; k < fa.length(); k++) {
 //                            String temp = fa.getString(k);
@@ -199,12 +200,12 @@ public class HTTPJson {
 //                        e.printStackTrace();
 //                    }
 
+
                     // Get deadline date String
                     JSONObject dl = read.getJSONObject(TAG_DEADLINES);
                     JSONArray dlArray = dl.getJSONArray(TAG_APPLICATION);
                     String deadlines = getArrayString(dlArray);
-                    // String deadlines = "N/A";
-                    // deadlines = dlArray.getString(0);
+
 
                     // Get Applictaion Info
                     JSONObject app = read.getJSONObject(TAG_APPLICATION);
