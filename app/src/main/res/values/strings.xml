@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WatScholarship</string>
+
+    <string name="title_activity_scholarship">Scholarship Details</string>
+
+    <string name="value">Value</string>
+    <string name="application">Application Details</string>
+    <string name="citizenship">Application Citizenship Requirement</string>
+    <string name="instructions">Application Instructions</string>
+    <string name="deadline">Application Deadline</string>
+    <string name="additional">Additional Application Information</string>
+    <string name="programs">Programs</string>
+    <string name="years">Years</string>
+    <string name="description">Description</string>
+    <string name="eligibility">Applicant Eligibility</string>
+    <string name="contact">Contact Information</string>
+    <string name="link">Link</string>
+
+    <!--No Internet-->
+    <string name="error">Error: No Internet</string>
+    <string name="retry">Retry</string>
+    <string name="filter">Filter</string>
+</resources>
