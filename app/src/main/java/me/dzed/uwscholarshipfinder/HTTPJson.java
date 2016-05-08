@@ -135,7 +135,9 @@ public class HTTPJson {
 
                 List<Scholarship> tmpList = new ArrayList<Scholarship>(data.length());
 
-                for(int i = 0; i < data.length(); i++) {
+                int len = data.length();
+
+                for(int i = 0; i < len; i++) {
                     JSONObject read = data.getJSONObject(i);
 
                     String id = read.getString(TAG_ID);
